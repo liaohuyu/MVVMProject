@@ -1,0 +1,79 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorTheme</item>
+        <item name="colorAccent">@color/colorTheme</item>
+        <item name="android:windowAnimationStyle">@style/default_animation</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/layer_splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--titleBar样式-->
+    <style name="ToolbarStyle" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionBarItemBackground">@drawable/toolbarItemBackground</item>
+        <item name="selectableItemBackground">@drawable/toolbarItemBackground</item>
+        <item name="titleTextAppearance">@style/ToolBar.Title</item>
+        <item name="subtitleTextAppearance">@style/Toolbar.SubTitle</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:textSize">18sp</item> &lt;!&ndash;  搞掂字体大小&ndash;&gt;-->
+    </style>
+    <!--titlebar 标题-->
+    <style name="ToolBar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <!--titlebar 副标题-->
+    <style name="Toolbar.SubTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">#99ffffff</item>
+    </style>
+    <!--电影详情页-->
+    <style name="MyScrollPage" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--选中状态icon的颜色和字体颜色-->
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorTheme</item>
+        <item name="colorAccent">@color/colorTheme</item>
+        <item name="android:windowAnimationStyle">@style/default_animation_down</item>
+    </style>
+
+    <!--A 启动 B 时，A 从屏幕上消失，这时执行的是A的
+android:activityOpenExitAnimation
+A 启动 B 时，B 出现在屏幕上，这时执行的是B的
+android:activityOpenEnterAnimation
+从 B 返回A时，B从屏幕上消失，这时执行的是B的
+android:activityCloseExitAnimation
+从 B 返回A时，A 出现在屏幕上，这时执行的是A的
+android:activityCloseEnterAnimation-->
+
+    <!-- 默认Activity跳转动画 -->
+    <style name="default_animation" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_up_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_up_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_down_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_down_out</item>
+    </style>
+
+    <!--只有上一页面退出时有动画-->
+    <style name="default_animation_down" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityCloseEnterAnimation">@anim/activity_down_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_down_out</item>
+    </style>
+
+    <style name="tabLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="tabIndicator">@drawable/shape_tab_indicator</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabSelectedTextColor">@color/colorTabTextCheck</item>
+        <item name="tabTextColor">@color/colorTabTextNormal</item>
+        <item name="tabBackground">@drawable/ripple_tab_bg</item>
+    </style>
+</resources>

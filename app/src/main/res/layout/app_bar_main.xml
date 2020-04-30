@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".ui.MainActivity">
+        <!--状态栏-->
+        <View
+            android:id="@+id/view_status"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/colorTheme"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorTheme"
+            android:theme="@style/ToolbarStyle"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/Theme.AppCompat.Light">
+
+            <FrameLayout
+                android:id="@+id/ll_title_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_title_menu"
+                    android:layout_width="23dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/titlebar_menu" />
+            </FrameLayout>
+
+            <!--selectableItemBackground 波纹有边界-->
+            <!--selectableItemBackgroundBorderless 波纹无边界-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    app:theme="@style/AppTheme">
+
+                    <ImageView
+                        android:id="@+id/iv_title_one"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/titlebar_music" />
+
+                    <ImageView
+                        android:id="@+id/iv_title_two"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/titlebar_disco" />
+
+                    <ImageView
+                        android:id="@+id/iv_title_three"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/titlebar_friends" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </android.support.v7.widget.Toolbar>
+
+        <!--beforeDescendants：viewgroup会优先其子类控件而获取到焦点
+afterDescendants：viewgroup只有当其子类控件不需要获取焦点时才获取焦点
+blocksDescendants：viewgroup会覆盖子类控件而直接获得焦点-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants" />
+    </LinearLayout>
+</layout>
