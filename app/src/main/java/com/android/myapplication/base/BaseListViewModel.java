@@ -6,8 +6,8 @@ import android.support.annotation.NonNull;
 /**
  * on 2020/4/29
  */
-public class BaseListModel extends BaseViewModel {
-    public BaseListModel(@NonNull Application application) {
+public class BaseListViewModel extends BaseViewModel {
+    public BaseListViewModel(@NonNull Application application) {
         super(application);
     }
 

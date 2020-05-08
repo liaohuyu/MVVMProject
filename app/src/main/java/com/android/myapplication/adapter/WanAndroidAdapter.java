@@ -7,7 +7,7 @@ import android.view.View;
 import com.android.myapplication.R;
 import com.android.myapplication.base.binding.BaseBindingAdapter;
 import com.android.myapplication.base.binding.BaseBindingHolder;
-import com.android.myapplication.bean.ArticlesBean;
+import com.android.myapplication.bean.wanandroid.ArticlesBean;
 import com.android.myapplication.data.UserUtil;
 import com.android.myapplication.data.model.CollectModel;
 import com.android.myapplication.databinding.ItemWanAndroidBinding;

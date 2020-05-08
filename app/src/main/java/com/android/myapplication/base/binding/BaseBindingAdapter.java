@@ -27,8 +27,8 @@ public abstract class BaseBindingAdapter<T, B extends ViewDataBinding> extends B
 
     @NonNull
     @Override
-    public BaseBindingHolder<T, B> onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new ViewHolder(viewGroup, i);
+    public BaseBindingHolder<T, B> onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        return new ViewHolder(viewGroup, mLayoutId);
     }
 
     private class ViewHolder extends BaseBindingHolder<T, B> {

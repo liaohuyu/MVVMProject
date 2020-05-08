@@ -5,9 +5,14 @@ import com.android.myapplication.bean.wanandroid.BaseResultBean;
 import com.android.myapplication.bean.wanandroid.CoinUserInfoBean;
 import com.android.myapplication.bean.wanandroid.HomeListBean;
 import com.android.myapplication.bean.wanandroid.LoginBean;
+import com.android.myapplication.bean.wanandroid.TreeBean;
 import com.android.myapplication.bean.wanandroid.WanAndroidBannerBean;
+import com.android.myapplication.bean.wanandroid.WxarticleDetailItemBean;
+import com.android.myapplication.bean.wanandroid.WxarticleItemBean;
 import com.library.http.HttpUtils;
 import com.library.http.utils.BuildFactory;
+
+import java.util.List;
 
 import io.reactivex.Flowable;
 import io.reactivex.Observable;
@@ -115,4 +120,16 @@ public interface HttpClient {
 
     @GET("article/listproject/{page}/json")
     Observable<HomeListBean> getProjectList(@Path("page") int page);
+
+    @GET("wxarticle/chapters/json")
+    Observable<BaseResultBean<List<WxarticleItemBean>>> getWxArticle();
+
+    @GET("wxarticle/list/{id}/{page}/json")
+    Observable<BaseResultBean<WxarticleDetailItemBean>> getWxArticleDetail(@Path("id") int id, @Path("page") int page);
+
+    /**
+     * 体系数据
+     */
+    @GET("tree/json")
+    Observable<TreeBean> getTree();
 }

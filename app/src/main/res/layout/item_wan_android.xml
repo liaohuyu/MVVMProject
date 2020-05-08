@@ -11,7 +11,7 @@
 
         <variable
             name="bean"
-            type="com.android.myapplication.bean.ArticlesBean" />
+            type="com.android.myapplication.bean.wanandroid.ArticlesBean" />
 
         <import type="android.text.Html" />
 

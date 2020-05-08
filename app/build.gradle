@@ -48,7 +48,8 @@ dependencies {
     implementation "android.arch.persistence.room:rxjava2:$rootProject.roomVersion"
     implementation "android.arch.paging:runtime:1.0.0"
     implementation 'com.github.youlookwhat:WebProgress:1.1.0'
-
+    // 流式标签 FlexboxLayout
+    implementation 'com.google.android:flexbox:1.0.0'
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
@@ -59,10 +60,10 @@ dependencies {
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.2'
     // leakcanary
-   // debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    // debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
 //    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
     //debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
-
+    implementation 'com.github.youlookwhat:SBannerView:1.1.1'
     implementation 'com.github.youlookwhat:ByRecyclerView:1.0.16-support'//加载刷新recycleView
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
     implementation 'com.android.support:multidex:1.0.3'

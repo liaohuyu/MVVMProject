@@ -1,8 +1,11 @@
 package com.android.myapplication.utils;
 
+import android.content.Context;
 import android.text.TextUtils;
 
 import com.android.myapplication.R;
+import com.android.myapplication.bean.wanandroid.TreeBean;
+import com.android.myapplication.http.cache.ACache;
 
 /**
  * @author jingbin
@@ -152,11 +155,11 @@ public class DataUtil {
     /**
      * 保存知识体系数据
      */
-   /* public static void putTreeData(Context context, TreeBean treeBean) {
+    public static void putTreeData(Context context, TreeBean treeBean) {
         ACache.get(context).put("TreeBean", treeBean);
     }
 
     public static TreeBean getTreeData(Context context) {
         return (TreeBean) ACache.get(context).getAsObject("TreeBean");
-    }*/
+    }
 }

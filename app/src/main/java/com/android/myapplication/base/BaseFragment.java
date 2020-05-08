@@ -64,6 +64,11 @@ public abstract class BaseFragment<VM extends AndroidViewModel, SV extends ViewD
         activity = (Activity) context;
     }
 
+
+    public Activity getBaseActivity() {
+        return activity;
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

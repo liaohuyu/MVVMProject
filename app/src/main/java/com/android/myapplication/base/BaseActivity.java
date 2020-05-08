@@ -186,7 +186,7 @@ public class BaseActivity<VM extends AndroidViewModel, SV extends ViewDataBindin
         //  getResources();
     }
 
-    //禁止改变字体大小   是否有必要？
+    //todo 禁止改变字体大小   是否有必要？因为这个方法会被回调很多次
     /*@Override
     public Resources getResources() {
         Resources resources = super.getResources();

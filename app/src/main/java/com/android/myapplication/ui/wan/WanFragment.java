@@ -8,6 +8,8 @@ import com.android.myapplication.R;
 import com.android.myapplication.base.BaseFragment;
 import com.android.myapplication.databinding.FragmentContentBinding;
 import com.android.myapplication.ui.wan.child.HomeFragment;
+import com.android.myapplication.ui.wan.child.TreeFragment;
+import com.android.myapplication.ui.wan.child.WanFindFragment;
 import com.android.myapplication.view.MyFragmentPagerAdapter;
 import com.android.myapplication.viewmodel.menu.NoViewModel;
 
@@ -46,8 +48,8 @@ public class WanFragment extends BaseFragment<NoViewModel, FragmentContentBindin
         mTitleList.add("知识体系");
         mTitleList.add("导航");
         mFragments.add(HomeFragment.newInstance());
-        mFragments.add(HomeFragment.newInstance());
-        mFragments.add(HomeFragment.newInstance());
+        mFragments.add(WanFindFragment.newInstance());
+        mFragments.add(TreeFragment.newInstance());
         mFragments.add(HomeFragment.newInstance());
       /*  mFragments.add(HomeFragment.newInstance());
         mFragments.add(WanFindFragment.newInstance());
